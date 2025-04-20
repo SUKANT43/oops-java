@@ -1,3 +1,5 @@
+package Inheritence;
+
 public class Box {
     double l;
     double h;
@@ -16,10 +18,15 @@ public class Box {
     }
 
     //cube
-    Box(double l,double h,double w){
-        this.w=l;
-        this.h=h;
-        this.l=w;
+    Box(double l, double h, double w){
+        this.l = l;
+        this.h = h;
+        this.w = w;
+    }
+    Box(Box old){
+        this.h=old.h;
+        this.w=old.w;
+        this.l=old.l;
     }
     public void information(){
         System.out.println("Running the box");
