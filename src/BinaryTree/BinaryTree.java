@@ -19,10 +19,21 @@ public class BinaryTree {
         return node;
     }
 
+    void preOrder(Node root){
+        if(root==null){
+            return ;
+        }
+        System.out.print(root.data+" ");
+        preOrder(root.left);
+        preOrder(root.right);
+    }
+
     public static void main(String[] args) {
         BinaryTree tree=new BinaryTree();
         Scanner sc=new Scanner(System.in);
-        tree.buildTree(sc);
+        Node ans=tree.buildTree(sc);
+        System.out.print("preorder: ");
+        tree.preOrder(ans);
     }
 }
 
