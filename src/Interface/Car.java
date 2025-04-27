@@ -1,6 +1,6 @@
 package Interface;
 
-public class Car implements Brake,Engine{
+public class Car implements Brake,Engine,Media{
     @Override
     public void brake(){
         System.out.println("I brake a like a normal car");
@@ -20,4 +20,6 @@ public class Car implements Brake,Engine{
     public void acc() {
         System.out.println("I acc a like a normal car");
     }
+
+
 }
